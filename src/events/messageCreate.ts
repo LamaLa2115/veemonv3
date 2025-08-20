@@ -92,7 +92,7 @@ export default {
         ...message,
         reply: message.reply.bind(message),
         followUp: message.reply.bind(message),
-        editReply: (content: any) => message.edit(content),
+        editReply: (content: any) => message.reply(content),
         deferReply: () => Promise.resolve(),
         user: message.author,
         member: message.member,
@@ -119,7 +119,11 @@ export default {
       logger.debug(`Prefix command executed: ${commandName} by ${message.author.tag}`);
     } catch (error) {
       logger.error(`Error executing prefix command ${commandName}:`, error);
-      await message.reply(`${config.emojis.deny} An error occurred while executing this command.`);
+      try {
+        await message.reply(`${config.emojis.deny} An error occurred while executing this command.`);
+      } catch (replyError) {
+        logger.error('Failed to send error message:', replyError);
+      }
     }
   },
 } satisfies Event;

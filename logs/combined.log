@@ -1075,3 +1075,69 @@ The table `main.reminders` does not exist in the current database. {
 2025-08-20 19:15:13 [INFO]: Logged in as veemon#4083 
 2025-08-20 19:15:13 [INFO]: Ready to serve 4 guilds 
 2025-08-20 19:15:52 [DEBUG]: Prefix command executed: afk by dh_667 
+2025-08-20 19:16:18 [DEBUG]: Command executed: help by _notavailable_ 
+2025-08-20 19:16:21 [DEBUG]: Command executed: coin by dh_667 
+2025-08-20 19:16:43 [ERROR]: Error executing command google: Required option "query" not found. {
+  "code": "CommandInteractionOptionNotFound",
+  "stack": "TypeError [CommandInteractionOptionNotFound]: Required option \"query\" not found.\n    at CommandInteractionOptionResolver.get (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:78:15)\n    at CommandInteractionOptionResolver._getTypedOption (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:95:25)\n    at CommandInteractionOptionResolver.getString (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:172:25)\n    at Object.execute (/home/runner/workspace/src/commands/fun/google.ts:15:39)\n    at BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:86:23)\n    at BleedClient.emit (node:events:536:35)\n    at InteractionCreateAction.handle (/home/runner/workspace/node_modules/discord.js/src/client/actions/InteractionCreate.js:101:12)\n    at module.exports [as INTERACTION_CREATE] (/home/runner/workspace/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)\n    at WebSocketManager.handlePacket (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:351:31)\n    at WebSocketManager.<anonymous> (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:235:12)"
+}
+2025-08-20 19:17:02 [DEBUG]: Prefix command executed: help by _notavailable_ 
+2025-08-20 19:17:32 [DEBUG]: Prefix command executed: afk by _notavailable_ 
+2025-08-20 19:19:03 [DEBUG]: Prefix command executed: voicemaster by _notavailable_ 
+2025-08-20 19:19:08 [DEBUG]: Command executed: voicemaster by _notavailable_ 
+2025-08-20 19:19:21 [DEBUG]: Command executed: voicemaster by _notavailable_ 
+2025-08-20 19:20:47 [INFO]: Successfully connected to database 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: botinfo 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: deploy 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: eval 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: ping 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: portal 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: prefix 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: reload 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: servers 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: status 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: 8ball 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: appstore 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: coin 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: dice 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: google 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: quote 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: urban 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: firstmessage 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: guildbanner 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: guildicon 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: createembed 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: emojiadd 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: ban 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: kick 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: role 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: timeout 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: setbanner 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: seticon 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: setsplash 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: voicemaster 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: afk 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: avatar 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: help 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: jumbo 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: math 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: pin 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: poll 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: remind 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: serverinfo 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: spotify 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: timestamp 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: twitter 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: unpin 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: userbanner 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: userinfo 
+2025-08-20 19:20:47 [DEBUG]: Loaded command: weather 
+2025-08-20 19:20:47 [INFO]: Loaded 45 commands 
+2025-08-20 19:20:47 [DEBUG]: Loaded event: interactionCreate 
+2025-08-20 19:20:47 [DEBUG]: Loaded event: messageCreate 
+2025-08-20 19:20:47 [DEBUG]: Loaded event: ready 
+2025-08-20 19:20:47 [DEBUG]: Loaded event: voiceStateUpdate 
+2025-08-20 19:20:47 [INFO]: Loaded 4 events 
+2025-08-20 19:20:48 [INFO]: Bot successfully started! 
+2025-08-20 19:20:48 [INFO]: Logged in as veemon#4083 
+2025-08-20 19:20:48 [INFO]: Ready to serve 4 guilds 

@@ -45,11 +45,11 @@ export default {
       const subcommand = interaction.options.getSubcommand();
       await interaction.deferReply();
 
-      const joinChannel = interaction.options.getChannel('channel');
-      const category = interaction.options.getChannel('category');
-
       switch (subcommand) {
         case 'setup':
+          const joinChannel = interaction.options.getChannel('channel');
+          const category = interaction.options.getChannel('category');
+          
           if (!joinChannel) {
             await interaction.editReply({
               content: `${config.emojis.deny} Invalid voice channel specified.`

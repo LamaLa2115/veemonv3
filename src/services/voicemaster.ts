@@ -28,14 +28,22 @@ export class VoicemasterService {
     if (!newState.channel || !newState.guild) return;
 
     try {
-      // For testing, let's use a hardcoded channel ID or name pattern
-      // You can replace this with your actual join-to-create channel ID
-      const JOIN_TO_CREATE_NAMES = ['Join to Create', 'Create Channel', '➕ Join to Create'];
-      const isJoinToCreateChannel = JOIN_TO_CREATE_NAMES.some(name => 
-        newState.channel?.name.toLowerCase().includes(name.toLowerCase())
-      );
+      // Check for join-to-create patterns or any channel with "join" or "create" in the name
+      const channelName = newState.channel.name.toLowerCase();
+      const isJoinToCreateChannel = 
+        channelName.includes('join') && channelName.includes('create') ||
+        channelName.includes('join-to-create') ||
+        channelName.includes('create channel') ||
+        channelName.includes('j2c') ||
+        channelName.startsWith('➕') ||
+        channelName.startsWith('+');
 
-      if (!isJoinToCreateChannel) return;
+      if (!isJoinToCreateChannel) {
+        logger.debug(`Channel "${newState.channel.name}" is not a join-to-create channel`);
+        return;
+      }
+
+      logger.debug(`Detected join-to-create channel: ${newState.channel.name}`);
 
       // Create temporary voice channel
       await this.createTempChannel(newState.member!);
@@ -121,14 +129,27 @@ export class VoicemasterService {
 
       // Move user to new channel
       await member.voice.setChannel(tempChannel);
+      logger.info(`✅ Created voicemaster channel: ${channelName} for ${member.displayName}`);
 
       // Send control panel
       await this.sendVoicemasterControls(tempChannel, member);
 
-      logger.debug(`Created voicemaster channel: ${channelName} for ${member.displayName}`);
+      logger.debug(`Sent control panel for voicemaster channel: ${channelName}`);
 
     } catch (error) {
-      logger.error('Error creating temp channel:', error);
+      logger.error('❌ Error creating temp channel:', error);
+      // Try to send a simple message to the user about the error
+      try {
+        const textChannel = member.guild.channels.cache
+          .filter(ch => ch.type === 0 && ch.permissionsFor(member.guild.members.me!)?.has('SendMessages'))
+          .first();
+        
+        if (textChannel && textChannel.isTextBased()) {
+          await textChannel.send(`${member}, failed to create your voice channel. Please contact an admin.`);
+        }
+      } catch (notifyError) {
+        logger.error('Failed to notify user of temp channel creation error:', notifyError);
+      }
     }
   }
 
