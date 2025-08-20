@@ -2,6 +2,7 @@ import { Events, ChatInputCommandInteraction, StringSelectMenuInteraction, Butto
 import { Event, ExtendedClient } from '../types/index';
 import { logger } from '../utils/logger';
 import { config } from '../config/config';
+import { db } from '../utils/database';
 
 export default {
   name: Events.InteractionCreate,
@@ -112,6 +113,8 @@ export default {
     else if (interaction.isButton()) {
       if (interaction.customId.startsWith('vm_')) {
         await handleVoicemasterButton(interaction);
+      } else if (interaction.customId.startsWith('vc_')) {
+        await handleUniversalVCButton(interaction);
       }
     }
   },
@@ -191,8 +194,8 @@ async function handleVoicemasterButton(interaction: ButtonInteraction) {
   const customId = interaction.customId;
   const [action, , channelId] = customId.split('_');
   
-  // Get channel data from database
   try {
+    // Get channel data from database
     const tempChannel = await db.getVoiceChannel(channelId);
     if (!tempChannel) {
       await interaction.reply({
@@ -220,13 +223,150 @@ async function handleVoicemasterButton(interaction: ButtonInteraction) {
       return;
     }
 
-    await interaction.reply({
-      content: `🔧 Voicemaster control "${action}" will be implemented soon.`,
-      flags: 64
-    });
+    // Handle different actions
+    switch (action) {
+      case 'lock':
+        await channel.permissionOverwrites.edit(interaction.guild!.roles.everyone, {
+          Connect: false
+        });
+        await interaction.reply({
+          content: '🔒 Voice channel locked! Only current members can join.',
+          flags: 64
+        });
+        break;
+
+      case 'unlock':
+        await channel.permissionOverwrites.edit(interaction.guild!.roles.everyone, {
+          Connect: true
+        });
+        await interaction.reply({
+          content: '🔓 Voice channel unlocked! Anyone can join.',
+          flags: 64
+        });
+        break;
+
+      case 'delete':
+        await channel.delete('Voice channel deleted by owner');
+        await db.deleteVoiceChannel(channelId);
+        await interaction.reply({
+          content: '🗑️ Voice channel deleted successfully.',
+          flags: 64
+        });
+        break;
+
+      case 'info':
+        const memberCount = channel.members.size;
+        const userLimit = channel.userLimit || 'No limit';
+        const isLocked = !channel.permissionsFor(interaction.guild!.roles.everyone)?.has('Connect');
+        
+        await interaction.reply({
+          content: `ℹ️ **Channel Info:**\n` +
+                  `👥 Members: ${memberCount}\n` +
+                  `🎯 Limit: ${userLimit}\n` +
+                  `🔒 Status: ${isLocked ? 'Locked' : 'Unlocked'}\n` +
+                  `👑 Owner: <@${tempChannel.ownerId}>`,
+          flags: 64
+        });
+        break;
+
+      default:
+        await interaction.reply({
+          content: `🔧 "${action}" control is being developed.`,
+          flags: 64
+        });
+    }
 
   } catch (error) {
     logger.error('Voicemaster button error:', error);
+    await interaction.reply({
+      content: '❌ An error occurred while processing your request.',
+      flags: 64
+    });
+  }
+}
+
+async function handleUniversalVCButton(interaction: ButtonInteraction) {
+  const action = interaction.customId.replace('vc_', '');
+  
+  try {
+    // Check if user is in a voice channel
+    if (!interaction.member?.voice?.channel) {
+      await interaction.reply({
+        content: '❌ You must be in a voice channel to use these controls.',
+        flags: 64
+      });
+      return;
+    }
+
+    const userVoiceChannel = interaction.member.voice.channel;
+    
+    // Check if this is a temporary voice channel they own
+    const tempChannel = await db.getVoiceChannel(userVoiceChannel.id);
+    if (!tempChannel || tempChannel.ownerId !== interaction.user.id) {
+      await interaction.reply({
+        content: '❌ You can only control temporary voice channels that you own.',
+        flags: 64
+      });
+      return;
+    }
+
+    const channel = userVoiceChannel;
+
+    // Handle different actions
+    switch (action) {
+      case 'lock':
+        await channel.permissionOverwrites.edit(interaction.guild!.roles.everyone, {
+          Connect: false
+        });
+        await interaction.reply({
+          content: '🔒 Your voice channel has been locked!',
+          flags: 64
+        });
+        break;
+
+      case 'unlock':
+        await channel.permissionOverwrites.edit(interaction.guild!.roles.everyone, {
+          Connect: true
+        });
+        await interaction.reply({
+          content: '🔓 Your voice channel has been unlocked!',
+          flags: 64
+        });
+        break;
+
+      case 'delete':
+        await channel.delete('Voice channel deleted by owner via control panel');
+        await db.deleteVoiceChannel(channel.id);
+        await interaction.reply({
+          content: '🗑️ Your voice channel has been deleted.',
+          flags: 64
+        });
+        break;
+
+      case 'info':
+        const memberCount = channel.members.size;
+        const userLimit = channel.userLimit || 'No limit';
+        const isLocked = !channel.permissionsFor(interaction.guild!.roles.everyone)?.has('Connect');
+        
+        await interaction.reply({
+          content: `ℹ️ **Your Channel Info:**\n` +
+                  `📝 Name: ${channel.name}\n` +
+                  `👥 Members: ${memberCount}\n` +
+                  `🎯 Limit: ${userLimit}\n` +
+                  `🔒 Status: ${isLocked ? 'Locked' : 'Unlocked'}`,
+          flags: 64
+        });
+        break;
+
+      default:
+        await interaction.reply({
+          content: `🔧 "${action}" control is being developed. Coming soon!`,
+          flags: 64
+        });
+    }
+
+  } catch (error) {
+    logger.error('Universal VC button error:', error);
     await interaction.reply({
       content: '❌ An error occurred while processing your request.',
       flags: 64

@@ -68,7 +68,7 @@ export default {
       '🎮 Fun': ['8ball', 'coin', 'dice', 'quote', 'appstore', 'google', 'urban'],
       '📊 Info': ['botinfo', 'firstmessage', 'guildbanner', 'guildicon', 'serverinfo', 'userinfo'],
       '🔧 Utility': ['afk', 'avatar', 'help', 'jumbo', 'math', 'pin', 'poll', 'remind', 'spotify', 'timestamp', 'twitter', 'unpin', 'userbanner', 'weather'],
-      '🎨 Server': ['prefix', 'setbanner', 'seticon', 'setsplash', 'voicemaster'],
+      '🎨 Server': ['prefix', 'setbanner', 'seticon', 'setsplash', 'vcpanel', 'voicemaster'],
       '⚙️ Misc': ['createembed', 'emojiadd'],
       '👑 Admin': ['deploy', 'eval', 'ping', 'portal', 'reload', 'servers', 'status']
     };
@@ -81,7 +81,7 @@ export default {
       .addFields(
         { 
           name: '📋 Quick Stats', 
-          value: `**Total Commands:** 45\n**Categories:** ${Object.keys(commandCategories).length}\n**Prefix:** \`/\` (Slash Commands) or \`,\` (Text Commands)`, 
+          value: `**Total Commands:** 46\n**Categories:** ${Object.keys(commandCategories).length}\n**Prefix:** \`/\` (Slash Commands) or \`,\` (Text Commands)`, 
           inline: false 
         },
         {

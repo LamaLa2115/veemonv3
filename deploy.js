@@ -50,6 +50,7 @@ const commandDefinitions = [
   { name: 'setbanner', description: 'Set the server banner' },
   { name: 'seticon', description: 'Set the server icon' },
   { name: 'setsplash', description: 'Set the server invite splash' },
+  { name: 'vcpanel', description: 'Create a permanent voice channel control panel' },
   { name: 'voicemaster', description: 'Configure join-to-create voice channels' },
   
   // Utility Commands
