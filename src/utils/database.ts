@@ -90,9 +90,28 @@ class DatabaseManager {
     return await this.prisma.guild.create({
       data: {
         id: guildId,
-        prefix: prefix || ',,',
+        prefix: prefix || ',',
       },
     });
+  }
+
+  public async setGuildPrefix(guildId: string, prefix: string) {
+    return await this.prisma.guild.upsert({
+      where: { id: guildId },
+      update: { prefix },
+      create: { 
+        id: guildId, 
+        prefix
+      },
+    });
+  }
+
+  public async getGuildPrefix(guildId: string): Promise<string | null> {
+    const guild = await this.prisma.guild.findUnique({
+      where: { id: guildId },
+      select: { prefix: true },
+    });
+    return guild?.prefix || null;
   }
 
   // Reminder methods

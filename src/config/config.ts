@@ -8,7 +8,7 @@ const configSchema = z.object({
   CLIENT_ID: z.string().min(1),
   GUILD_ID: z.string().optional(),
   OWNER_ID: z.string().min(1),
-  DEFAULT_PREFIX: z.string().default(',,'),
+  DEFAULT_PREFIX: z.string().default(','),
   JOIN_TO_CREATE_CHANNEL_ID: z.string().optional(),
   LASTFM_API_KEY: z.string().optional(),
   NODE_ENV: z.enum(['development', 'production']).default('development'),

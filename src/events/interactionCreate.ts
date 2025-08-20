@@ -34,8 +34,8 @@ export default {
       return;
     }
 
-    // Check permissions
-    if (command.permissions && interaction.guild) {
+    // Check permissions (owner bypass)
+    if (command.permissions && interaction.guild && interaction.user.id !== config.discord.ownerId) {
       const member = await interaction.guild.members.fetch(interaction.user.id);
       const hasPermissions = command.permissions.every(permission =>
         member.permissions.has(permission)

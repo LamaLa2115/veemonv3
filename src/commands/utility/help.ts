@@ -64,13 +64,13 @@ export default {
 
     // Main help menu with categories
     const commandCategories = {
-      '🛡️ Moderation': ['ban', 'kick', 'timeout'],
-      '🎮 Fun': ['8ball', 'quote', 'appstore', 'google', 'urban'],
-      '📊 Info': ['firstmessage', 'guildbanner', 'guildicon', 'serverinfo', 'userinfo'],
-      '🔧 Utility': ['afk', 'avatar', 'jumbo', 'pin', 'poll', 'remind', 'spotify', 'twitter', 'unpin', 'userbanner', 'weather'],
-      '🎨 Server': ['setbanner', 'seticon', 'setsplash'],
+      '🛡️ Moderation': ['ban', 'kick', 'timeout', 'role'],
+      '🎮 Fun': ['8ball', 'coin', 'dice', 'quote', 'appstore', 'google', 'urban'],
+      '📊 Info': ['botinfo', 'firstmessage', 'guildbanner', 'guildicon', 'serverinfo', 'userinfo'],
+      '🔧 Utility': ['afk', 'avatar', 'help', 'jumbo', 'math', 'pin', 'poll', 'remind', 'spotify', 'timestamp', 'twitter', 'unpin', 'userbanner', 'weather'],
+      '🎨 Server': ['prefix', 'setbanner', 'seticon', 'setsplash'],
       '⚙️ Misc': ['createembed', 'emojiadd'],
-      '👑 Admin': ['eval', 'reload', 'status']
+      '👑 Admin': ['deploy', 'eval', 'ping', 'reload', 'servers', 'status']
     };
 
     const mainEmbed = new EmbedBuilder()
@@ -81,7 +81,7 @@ export default {
       .addFields(
         { 
           name: '📋 Quick Stats', 
-          value: `**Total Commands:** 32\n**Categories:** ${Object.keys(commandCategories).length}\n**Prefix:** \`/\` (Slash Commands)`, 
+          value: `**Total Commands:** 42\n**Categories:** ${Object.keys(commandCategories).length}\n**Prefix:** \`/\` (Slash Commands)`, 
           inline: false 
         },
         {
