@@ -1213,3 +1213,78 @@ The table `main.reminders` does not exist in the current database. {
 2025-08-20 19:26:04 [INFO]: Bot successfully started! 
 2025-08-20 19:26:04 [INFO]: Logged in as veemon#4083 
 2025-08-20 19:26:04 [INFO]: Ready to serve 4 guilds 
+2025-08-20 19:27:28 [DEBUG]: Cleaned up empty voicemaster channel: 💨's Channel 
+2025-08-20 19:27:38 [DEBUG]: Command executed: deploy by _notavailable_ 
+2025-08-20 19:27:48 [ERROR]: Error executing command deploy: No subcommand specified for interaction. {
+  "code": "CommandInteractionOptionNoSubcommand",
+  "stack": "TypeError [CommandInteractionOptionNoSubcommand]: No subcommand specified for interaction.\n    at CommandInteractionOptionResolver.getSubcommand (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:113:13)\n    at Object.execute (/home/runner/workspace/src/commands/admin/deploy.ts:32:44)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:87:9)"
+}
+2025-08-20 19:27:53 [DEBUG]: Prefix command executed: deploy by _notavailable_ 
+2025-08-20 19:28:00 [DEBUG]: Command executed: voicemaster by _notavailable_ 
+2025-08-20 19:28:07 [DEBUG]: Command executed: voicemaster by _notavailable_ 
+2025-08-20 19:28:08 [DEBUG]: Detected join-to-create channel: J2C 
+2025-08-20 19:28:09 [DEBUG]: Channel "💨's Channel" is not a join-to-create channel 
+2025-08-20 19:28:09 [INFO]: ✅ Created voicemaster channel: 💨's Channel for 💨 
+2025-08-20 19:28:09 [DEBUG]: Sent control panel for voicemaster channel: 💨's Channel 
+2025-08-20 19:28:29 [DEBUG]: Command executed: vcpanel by _notavailable_ 
+2025-08-20 19:29:03 [DEBUG]: Cleaned up empty voicemaster channel: 💨's Channel 
+2025-08-20 19:29:03 [DEBUG]: Detected join-to-create channel: J2C 
+2025-08-20 19:29:04 [DEBUG]: Channel "💨's Channel" is not a join-to-create channel 
+2025-08-20 19:29:04 [INFO]: ✅ Created voicemaster channel: 💨's Channel for 💨 
+2025-08-20 19:29:04 [DEBUG]: Sent control panel for voicemaster channel: 💨's Channel 
+2025-08-20 19:29:52 [INFO]: Successfully connected to database 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: botinfo 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: deploy 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: eval 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: ping 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: portal 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: prefix 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: reload 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: servers 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: status 
+2025-08-20 19:29:52 [DEBUG]: Loaded command: 8ball 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: appstore 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: coin 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: dice 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: google 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: quote 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: urban 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: firstmessage 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: guildbanner 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: guildicon 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: createembed 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: emojiadd 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: ban 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: kick 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: role 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: timeout 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: setbanner 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: seticon 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: setsplash 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: vcpanel 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: voicemaster 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: afk 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: avatar 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: help 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: jumbo 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: math 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: pin 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: poll 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: remind 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: serverinfo 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: spotify 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: timestamp 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: twitter 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: unpin 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: userbanner 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: userinfo 
+2025-08-20 19:29:53 [DEBUG]: Loaded command: weather 
+2025-08-20 19:29:53 [INFO]: Loaded 46 commands 
+2025-08-20 19:29:53 [DEBUG]: Loaded event: interactionCreate 
+2025-08-20 19:29:53 [DEBUG]: Loaded event: messageCreate 
+2025-08-20 19:29:53 [DEBUG]: Loaded event: ready 
+2025-08-20 19:29:53 [DEBUG]: Loaded event: voiceStateUpdate 
+2025-08-20 19:29:53 [INFO]: Loaded 4 events 
+2025-08-20 19:29:54 [INFO]: Bot successfully started! 
+2025-08-20 19:29:54 [INFO]: Logged in as veemon#4083 
+2025-08-20 19:29:54 [INFO]: Ready to serve 4 guilds 

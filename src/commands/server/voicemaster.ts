@@ -71,7 +71,7 @@ export default {
                 { name: 'Status', value: '🟢 Enabled', inline: true }
               )
               .addFields(
-                { name: 'How it works:', value: 'When users join the specified voice channel, a temporary channel will be created for them with full control permissions.' }
+                { name: 'How it works:', value: 'When users join the specified voice channel, a temporary channel will be created for them. Use `/vcpanel` to create a control panel for managing temporary channels.' }
               )
               .setColor(config.colors.success)
               .setTimestamp();
@@ -104,8 +104,9 @@ export default {
             .setTitle('🎙️ Voicemaster Status')
             .setDescription('Current join-to-create configuration')
             .addFields(
-              { name: 'Status', value: '⚙️ Being configured', inline: true },
-              { name: 'Setup', value: 'Use `/voicemaster setup` to configure the system', inline: false }
+              { name: 'Status', value: '🟢 Active', inline: true },
+              { name: 'Join Channels', value: 'Any channel with "join" and "create" in name', inline: false },
+              { name: 'Control Panel', value: 'Use `/vcpanel` to manage temporary channels', inline: false }
             )
             .setColor(config.colors.primary)
             .setTimestamp();

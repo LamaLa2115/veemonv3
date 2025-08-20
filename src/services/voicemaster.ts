@@ -131,11 +131,6 @@ export class VoicemasterService {
       await member.voice.setChannel(tempChannel);
       logger.info(`✅ Created voicemaster channel: ${channelName} for ${member.displayName}`);
 
-      // Send control panel
-      await this.sendVoicemasterControls(tempChannel, member);
-
-      logger.debug(`Sent control panel for voicemaster channel: ${channelName}`);
-
     } catch (error) {
       logger.error('❌ Error creating temp channel:', error);
       // Try to send a simple message to the user about the error
