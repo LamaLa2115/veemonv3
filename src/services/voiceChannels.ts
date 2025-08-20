@@ -1,7 +1,7 @@
 import { VoiceState, ChannelType, PermissionFlagsBits } from 'discord.js';
-import { config } from '../config/config.js';
-import { db } from '../utils/database.js';
-import { logger } from '../utils/logger.js';
+import { config } from '../config/config';
+import { db } from '../utils/database';
+import { logger } from '../utils/logger';
 
 export class VoiceChannelManager {
   private static tempChannels = new Map<string, string>(); // channelId -> ownerId

@@ -1,6 +1,6 @@
 import { Events, Client } from 'discord.js';
-import { Event } from '../types/index.js';
-import { logger } from '../utils/logger.js';
+import { Event } from '../types/index';
+import { logger } from '../utils/logger';
 
 export default {
   name: Events.ClientReady,
@@ -12,7 +12,7 @@ export default {
     // Start reminder checker
     setInterval(async () => {
       try {
-        const { checkReminders } = await import('../services/reminderService.js');
+        const { checkReminders } = await import('../services/reminderService');
         await checkReminders(client);
       } catch (error) {
         logger.error('Error checking reminders:', error);

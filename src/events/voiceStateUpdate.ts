@@ -1,7 +1,7 @@
 import { Events, VoiceState } from 'discord.js';
-import { Event } from '../types/index.js';
-import { VoiceChannelManager } from '../services/voiceChannels.js';
-import { logger } from '../utils/logger.js';
+import { Event } from '../types/index';
+import { VoiceChannelManager } from '../services/voiceChannels';
+import { logger } from '../utils/logger';
 
 export default {
   name: Events.VoiceStateUpdate,

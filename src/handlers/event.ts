@@ -1,9 +1,9 @@
 import { readdirSync } from 'fs';
 import { join, resolve } from 'path';
 import { pathToFileURL } from 'url';
-import { BleedClient } from '../structures/Client.js';
-import { Event } from '../types/index.js';
-import { logger } from '../utils/logger.js';
+import { BleedClient } from '../structures/Client';
+import { Event } from '../types/index';
+import { logger } from '../utils/logger';
 
 export async function loadEvents(client: BleedClient): Promise<void> {
   const eventsPath = resolve(process.cwd(), 'src', 'events');

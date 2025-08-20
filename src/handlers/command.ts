@@ -2,9 +2,9 @@ import { Collection } from 'discord.js';
 import { readdirSync, statSync } from 'fs';
 import { join, resolve } from 'path';
 import { pathToFileURL } from 'url';
-import { BleedClient } from '../structures/Client.js';
-import { Command } from '../types/index.js';
-import { logger } from '../utils/logger.js';
+import { BleedClient } from '../structures/Client';
+import { Command } from '../types/index';
+import { logger } from '../utils/logger';
 
 export async function loadCommands(client: BleedClient): Promise<void> {
   const commandsPath = resolve(process.cwd(), 'src', 'commands');

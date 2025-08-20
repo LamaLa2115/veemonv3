@@ -1,7 +1,7 @@
 import { Events, ChatInputCommandInteraction, PermissionFlagsBits } from 'discord.js';
-import { Event, ExtendedClient } from '../types/index.js';
-import { logger } from '../utils/logger.js';
-import { config } from '../config/config.js';
+import { Event, ExtendedClient } from '../types/index';
+import { logger } from '../utils/logger';
+import { config } from '../config/config';
 
 export default {
   name: Events.InteractionCreate,

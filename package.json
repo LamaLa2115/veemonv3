@@ -21,7 +21,7 @@
     "canvas": "^3.2.0",
     "common-tags": "^1.8.2",
     "discord-api-types": "^0.37.120",
-    "discord.js": "^14.15.3",
+    "discord.js": "^14.21.0",
     "dotenv": "^16.6.1",
     "glob": "^11.0.3",
     "google": "^2.1.0",

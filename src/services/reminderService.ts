@@ -1,7 +1,7 @@
 import { Client } from 'discord.js';
-import { db } from '../utils/database.js';
-import { logger } from '../utils/logger.js';
-import { config } from '../config/config.js';
+import { db } from '../utils/database';
+import { logger } from '../utils/logger';
+import { config } from '../config/config';
 
 export async function checkReminders(client: Client): Promise<void> {
   try {
