@@ -14,6 +14,7 @@ const commandDefinitions = [
   { name: 'deploy', description: 'Deploy slash commands to servers (Owner only)' },
   { name: 'eval', description: 'Evaluate JavaScript code (Owner only)' },
   { name: 'ping', description: 'Check the bot\'s latency and API response time' },
+  { name: 'portal', description: 'Create invite links to servers the bot is in (Owner only)' },
   { name: 'prefix', description: 'View or change the server prefix' },
   { name: 'reload', description: 'Reload commands and events (Owner only)' },
   { name: 'servers', description: 'View servers the bot is in and create invites (Owner only)' },
@@ -49,6 +50,7 @@ const commandDefinitions = [
   { name: 'setbanner', description: 'Set the server banner' },
   { name: 'seticon', description: 'Set the server icon' },
   { name: 'setsplash', description: 'Set the server invite splash' },
+  { name: 'voicemaster', description: 'Configure join-to-create voice channels' },
   
   // Utility Commands
   { name: 'afk', description: 'Set or remove your AFK status' },

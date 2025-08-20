@@ -1,15 +1,15 @@
 import { Events, VoiceState } from 'discord.js';
 import { Event } from '../types/index';
-import { VoiceChannelManager } from '../services/voiceChannels';
+import { VoicemasterService } from '../services/voicemaster';
 import { logger } from '../utils/logger';
 
 export default {
   name: Events.VoiceStateUpdate,
   async execute(oldState: VoiceState, newState: VoiceState) {
     try {
-      await VoiceChannelManager.handleVoiceStateUpdate(oldState, newState);
+      await VoicemasterService.handleVoiceStateUpdate(oldState, newState);
     } catch (error) {
-      logger.error('Error handling voice state update:', error);
+      logger.error('Error in voiceStateUpdate event:', error);
     }
   },
 } satisfies Event;

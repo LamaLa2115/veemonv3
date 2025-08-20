@@ -23,8 +23,16 @@ Preferred communication style: Simple, everyday language.
 - Fixed TypeScript configuration and module resolution issues
 - Installed all required dependencies including Discord.js v14, Prisma, MongoDB, and utility libraries
 - Configured environment secrets for Discord API credentials (DISCORD_TOKEN, CLIENT_ID, OWNER_ID)
-- Bot is now running successfully with 23 commands loaded and 3 events configured
+- Bot is now running successfully with 45 commands loaded and 4 events configured
 - Database connection established and working properly
+
+## Portal & Voicemaster Features Added (August 20, 2025)
+- Added `/portal` command for owner to create invite links to any server the bot is in
+- Implemented comprehensive voicemaster system with `/voicemaster` command
+- Added join-to-create voice channel functionality with temporary channel management
+- Created voicemaster control panels with buttons for lock/unlock, limit, rename, kick, transfer ownership
+- Added database schema for voicemaster configurations and temporary voice channels
+- Deployed 45 slash commands globally to Discord API with instant guild deployment option
 
 # System Architecture
 

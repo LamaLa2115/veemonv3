@@ -46,3 +46,15 @@ model VoiceChannel {
 
   @@map("voice_channels")
 }
+
+model VoicemasterConfig {
+  id            Int      @id @default(autoincrement())
+  guildId       String   @unique
+  joinChannelId String
+  categoryId    String?
+  isEnabled     Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("voicemaster_configs")
+}
