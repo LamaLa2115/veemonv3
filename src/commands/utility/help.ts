@@ -64,7 +64,7 @@ export default {
 
     // Main help menu with categories
     const commandCategories = {
-      '🛡️ Moderation': ['ban', 'kick', 'timeout', 'role'],
+      '🛡️ Moderation': ['ban', 'kick', 'purge', 'timeout', 'role'],
       '🎮 Fun': ['8ball', 'coin', 'dice', 'quote', 'appstore', 'google', 'urban'],
       '📊 Info': ['botinfo', 'firstmessage', 'guildbanner', 'guildicon', 'serverinfo', 'userinfo'],
       '🔧 Utility': ['afk', 'avatar', 'help', 'jumbo', 'math', 'pin', 'poll', 'remind', 'spotify', 'timestamp', 'twitter', 'unpin', 'userbanner', 'weather'],
@@ -81,7 +81,7 @@ export default {
       .addFields(
         { 
           name: '📋 Quick Stats', 
-          value: `**Total Commands:** 46\n**Categories:** ${Object.keys(commandCategories).length}\n**Prefix:** \`/\` (Slash Commands) or \`,\` (Text Commands)`, 
+          value: `**Total Commands:** 47\n**Categories:** ${Object.keys(commandCategories).length}\n**Prefix:** \`/\` (Slash Commands) or \`,\` (Text Commands)`, 
           inline: false 
         },
         {

@@ -43,6 +43,7 @@ const commandDefinitions = [
   // Moderation Commands
   { name: 'ban', description: 'Ban a user from the server' },
   { name: 'kick', description: 'Kick a user from the server' },
+  { name: 'purge', description: 'Delete a specified number of messages from the channel' },
   { name: 'role', description: 'Manage user roles and server roles' },
   { name: 'timeout', description: 'Timeout a user for a specified duration' },
   
