@@ -223,3 +223,39 @@ The table `main.reminders` does not exist in the current database. {
   "name": "PrismaClientKnownRequestError",
   "stack": "PrismaClientKnownRequestError: \nInvalid `this.prisma.reminder.findMany()` invocation in\n/home/runner/workspace/src/utils/database.ts:111:39\n\n  108 }\n  109 \n  110 public async getExpiredReminders() {\n→ 111   return await this.prisma.reminder.findMany(\nThe table `main.reminders` does not exist in the current database.\n    at ei.handleRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ei.handleAndLogRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ei.request (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async a (/home/runner/workspace/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)\n    at async DatabaseManager.getExpiredReminders (/home/runner/workspace/src/utils/database.ts:111:12)\n    at async checkReminders (/home/runner/workspace/src/services/reminderService.ts:8:30)\n    at async Timeout._onTimeout (/home/runner/workspace/src/events/ready.ts:16:9)"
 }
+2025-08-20 18:41:40 [ERROR]: Error checking reminders: 
+Invalid `this.prisma.reminder.findMany()` invocation in
+/home/runner/workspace/src/utils/database.ts:111:39
+
+  108 }
+  109 
+  110 public async getExpiredReminders() {
+→ 111   return await this.prisma.reminder.findMany(
+The table `main.reminders` does not exist in the current database. {
+  "code": "P2021",
+  "meta": {
+    "modelName": "Reminder",
+    "table": "main.reminders"
+  },
+  "clientVersion": "6.14.0",
+  "name": "PrismaClientKnownRequestError",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prisma.reminder.findMany()` invocation in\n/home/runner/workspace/src/utils/database.ts:111:39\n\n  108 }\n  109 \n  110 public async getExpiredReminders() {\n→ 111   return await this.prisma.reminder.findMany(\nThe table `main.reminders` does not exist in the current database.\n    at ei.handleRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ei.handleAndLogRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ei.request (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async a (/home/runner/workspace/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)\n    at async DatabaseManager.getExpiredReminders (/home/runner/workspace/src/utils/database.ts:111:12)\n    at async checkReminders (/home/runner/workspace/src/services/reminderService.ts:8:30)\n    at async Timeout._onTimeout (/home/runner/workspace/src/events/ready.ts:16:9)"
+}
+2025-08-20 18:42:40 [ERROR]: Error checking reminders: 
+Invalid `this.prisma.reminder.findMany()` invocation in
+/home/runner/workspace/src/utils/database.ts:111:39
+
+  108 }
+  109 
+  110 public async getExpiredReminders() {
+→ 111   return await this.prisma.reminder.findMany(
+The table `main.reminders` does not exist in the current database. {
+  "code": "P2021",
+  "meta": {
+    "modelName": "Reminder",
+    "table": "main.reminders"
+  },
+  "clientVersion": "6.14.0",
+  "name": "PrismaClientKnownRequestError",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prisma.reminder.findMany()` invocation in\n/home/runner/workspace/src/utils/database.ts:111:39\n\n  108 }\n  109 \n  110 public async getExpiredReminders() {\n→ 111   return await this.prisma.reminder.findMany(\nThe table `main.reminders` does not exist in the current database.\n    at ei.handleRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ei.handleAndLogRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ei.request (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async a (/home/runner/workspace/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)\n    at async DatabaseManager.getExpiredReminders (/home/runner/workspace/src/utils/database.ts:111:12)\n    at async checkReminders (/home/runner/workspace/src/services/reminderService.ts:8:30)\n    at async Timeout._onTimeout (/home/runner/workspace/src/events/ready.ts:16:9)"
+}
