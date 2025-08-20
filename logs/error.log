@@ -498,3 +498,423 @@ The table `main.reminders` does not exist in the current database. {
   "code": "CommandInteractionOptionNoSubcommand",
   "stack": "TypeError [CommandInteractionOptionNoSubcommand]: No subcommand specified for interaction.\n    at CommandInteractionOptionResolver.getSubcommand (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:113:13)\n    at Object.execute (/home/runner/workspace/src/commands/moderation/role.ts:165:44)\n    at BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:87:23)\n    at BleedClient.emit (node:events:524:28)\n    at InteractionCreateAction.handle (/home/runner/workspace/node_modules/discord.js/src/client/actions/InteractionCreate.js:101:12)\n    at module.exports [as INTERACTION_CREATE] (/home/runner/workspace/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)\n    at WebSocketManager.handlePacket (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:351:31)\n    at WebSocketManager.<anonymous> (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:235:12)\n    at WebSocketManager.emit (/home/runner/workspace/node_modules/@vladfrangu/async_event_emitter/src/index.ts:513:28)\n    at WebSocketShard.<anonymous> (/home/runner/workspace/node_modules/@discordjs/ws/src/strategies/sharding/SimpleShardingStrategy.ts:32:47)"
 }
+2025-08-20 21:00:17 [ERROR]: Error executing command deploy: No subcommand specified for interaction. {
+  "code": "CommandInteractionOptionNoSubcommand",
+  "stack": "TypeError [CommandInteractionOptionNoSubcommand]: No subcommand specified for interaction.\n    at CommandInteractionOptionResolver.getSubcommand (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:113:13)\n    at Object.execute (/home/runner/workspace/src/commands/admin/deploy.ts:32:44)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:87:9)"
+}
+2025-08-20 21:02:23 [ERROR]: Error executing command purge: Required option "amount" not found. {
+  "code": "CommandInteractionOptionNotFound",
+  "stack": "TypeError [CommandInteractionOptionNotFound]: Required option \"amount\" not found.\n    at CommandInteractionOptionResolver.get (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:78:15)\n    at CommandInteractionOptionResolver._getTypedOption (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:95:25)\n    at CommandInteractionOptionResolver.getInteger (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:183:25)\n    at Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:34:40)\n    at BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:87:23)\n    at BleedClient.emit (node:events:524:28)\n    at InteractionCreateAction.handle (/home/runner/workspace/node_modules/discord.js/src/client/actions/InteractionCreate.js:101:12)\n    at module.exports [as INTERACTION_CREATE] (/home/runner/workspace/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)\n    at WebSocketManager.handlePacket (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:351:31)\n    at WebSocketManager.<anonymous> (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:235:12)"
+}
+2025-08-20 21:02:47 [ERROR]: Error executing command deploy: No subcommand specified for interaction. {
+  "code": "CommandInteractionOptionNoSubcommand",
+  "stack": "TypeError [CommandInteractionOptionNoSubcommand]: No subcommand specified for interaction.\n    at CommandInteractionOptionResolver.getSubcommand (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:113:13)\n    at Object.execute (/home/runner/workspace/src/commands/admin/deploy.ts:32:44)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:87:9)"
+}
+2025-08-20 21:03:19 [ERROR]: Error executing prefix command purge: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to purge messages. Make sure I have the necessary permissions.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407832395276882122",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:132:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 21:03:20 [ERROR]: Failed to send error message: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> An error occurred while executing this command.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407832395276882122",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:123:9)"
+}
+2025-08-20 21:03:40 [ERROR]: Error executing prefix command purge: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to purge messages. Make sure I have the necessary permissions.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407832479678726164",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:132:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 21:03:40 [ERROR]: Failed to send error message: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> An error occurred while executing this command.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407832479678726164",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:123:9)"
+}
+2025-08-20 21:03:45 [ERROR]: Error executing prefix command purge: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to purge messages. Make sure I have the necessary permissions.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407832503632531577",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:132:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 21:03:45 [ERROR]: Failed to send error message: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> An error occurred while executing this command.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407832503632531577",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:123:9)"
+}
+2025-08-20 21:06:55 [ERROR]: Error executing prefix command purge: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to purge messages. Make sure I have the necessary permissions.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407833298423517234",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1136367366016610438/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:132:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 21:06:55 [ERROR]: Failed to send error message: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> An error occurred while executing this command.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407833298423517234",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1136367366016610438/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:123:9)"
+}
+2025-08-20 21:07:06 [ERROR]: Error executing prefix command purge: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to purge messages. Make sure I have the necessary permissions.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407833344351145996",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1136367366016610438/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:132:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 21:07:06 [ERROR]: Failed to send error message: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> An error occurred while executing this command.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407833344351145996",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1136367366016610438/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:123:9)"
+}
+2025-08-20 21:09:11 [ERROR]: Error executing prefix command purge: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to purge messages. Make sure I have the necessary permissions.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407833869469876334",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407069075355598868/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async Object.execute (/home/runner/workspace/src/commands/moderation/purge.ts:132:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 21:09:12 [ERROR]: Failed to send error message: Invalid Form Body
+message_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> An error occurred while executing this command.",
+      "tts": false,
+      "enforce_nonce": false,
+      "message_reference": {
+        "message_id": "1407833869469876334",
+        "fail_if_not_exists": true
+      }
+    }
+  },
+  "rawError": {
+    "message": "Invalid Form Body",
+    "code": 50035,
+    "errors": {
+      "message_reference": {
+        "_errors": [
+          {
+            "code": "MESSAGE_REFERENCE_UNKNOWN_MESSAGE",
+            "message": "Unknown message"
+          }
+        ]
+      }
+    }
+  },
+  "code": 50035,
+  "status": 400,
+  "method": "POST",
+  "url": "https://discord.com/api/v10/channels/1407069075355598868/messages",
+  "stack": "DiscordAPIError[50035]: Invalid Form Body\nmessage_reference[MESSAGE_REFERENCE_UNKNOWN_MESSAGE]: Unknown message\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async TextChannel.send (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:195:15)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:123:9)"
+}
