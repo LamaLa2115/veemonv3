@@ -1288,3 +1288,8 @@ The table `main.reminders` does not exist in the current database. {
 2025-08-20 19:29:54 [INFO]: Bot successfully started! 
 2025-08-20 19:29:54 [INFO]: Logged in as veemon#4083 
 2025-08-20 19:29:54 [INFO]: Ready to serve 4 guilds 
+2025-08-20 19:33:31 [DEBUG]: Cleaned up empty voicemaster channel: 💨's Channel 
+2025-08-20 19:34:20 [DEBUG]: Detected join-to-create channel: J2C 
+2025-08-20 19:34:21 [DEBUG]: Channel "💨's Channel" is not a join-to-create channel 
+2025-08-20 19:34:21 [INFO]: ✅ Created voicemaster channel: 💨's Channel for 💨 
+2025-08-20 19:34:36 [DEBUG]: Cleaned up empty voicemaster channel: 💨's Channel 
