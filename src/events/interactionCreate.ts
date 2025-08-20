@@ -1,4 +1,4 @@
-import { Events, ChatInputCommandInteraction, PermissionFlagsBits } from 'discord.js';
+import { Events, ChatInputCommandInteraction } from 'discord.js';
 import { Event, ExtendedClient } from '../types/index';
 import { logger } from '../utils/logger';
 import { config } from '../config/config';

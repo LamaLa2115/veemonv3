@@ -1,4 +1,4 @@
-import { Collection } from 'discord.js';
+// Collection import removed as it's not used
 import { readdirSync, statSync } from 'fs';
 import { join, resolve } from 'path';
 import { pathToFileURL } from 'url';

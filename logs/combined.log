@@ -229,3 +229,44 @@ The table `main.reminders` does not exist in the current database. {
 2025-08-20 17:56:45 [INFO]: Received SIGTERM, shutting down gracefully... 
 2025-08-20 17:56:45 [INFO]: Shutting down bot... 
 2025-08-20 17:56:45 [INFO]: Disconnected from database 
+2025-08-20 18:35:25 [INFO]: Successfully connected to database 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: eval 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: reload 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: status 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: appstore 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: google 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: urban 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: firstmessage 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: guildbanner 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: guildicon 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: createembed 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: emojiadd 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: setbanner 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: seticon 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: setsplash 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: afk 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: avatar 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: jumbo 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: pin 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: poll 
+2025-08-20 18:35:25 [ERROR]: Error loading command remind.ts: Cannot find module 'date-fns'
+Require stack:
+- /home/runner/workspace/src/commands/utility/remind.ts {
+  "code": "MODULE_NOT_FOUND",
+  "requireStack": [
+    "/home/runner/workspace/src/commands/utility/remind.ts"
+  ],
+  "stack": "Error: Cannot find module 'date-fns'\nRequire stack:\n- /home/runner/workspace/src/commands/utility/remind.ts\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)\n    at nextResolveSimple (/home/runner/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)\n    at /home/runner/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630\n    at /home/runner/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542\n    at resolveTsPaths (/home/runner/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)\n    at /home/runner/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102\n    at m._resolveFilename (file:///home/runner/workspace/node_modules/tsx/dist/register-B7jrtLTO.mjs:1:789)\n    at Module._load (node:internal/modules/cjs/loader:1043:27)\n    at Module.require (node:internal/modules/cjs/loader:1298:19)\n    at require (node:internal/modules/helpers:182:18)"
+}
+2025-08-20 18:35:25 [DEBUG]: Loaded command: spotify 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: twitter 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: unpin 
+2025-08-20 18:35:25 [DEBUG]: Loaded command: userbanner 
+2025-08-20 18:35:25 [INFO]: Loaded 23 commands 
+2025-08-20 18:35:25 [DEBUG]: Loaded event: interactionCreate 
+2025-08-20 18:35:25 [DEBUG]: Loaded event: ready 
+2025-08-20 18:35:25 [DEBUG]: Loaded event: voiceStateUpdate 
+2025-08-20 18:35:25 [INFO]: Loaded 3 events 
+2025-08-20 18:35:25 [INFO]: Bot successfully started! 
+2025-08-20 18:35:25 [INFO]: Logged in as veemon#4083 
+2025-08-20 18:35:25 [INFO]: Ready to serve 4 guilds 
