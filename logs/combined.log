@@ -270,3 +270,123 @@ Require stack:
 2025-08-20 18:35:25 [INFO]: Bot successfully started! 
 2025-08-20 18:35:25 [INFO]: Logged in as veemon#4083 
 2025-08-20 18:35:25 [INFO]: Ready to serve 4 guilds 
+2025-08-20 18:36:25 [ERROR]: Error checking reminders: 
+Invalid `this.prisma.reminder.findMany()` invocation in
+/home/runner/workspace/src/utils/database.ts:111:39
+
+  108 }
+  109 
+  110 public async getExpiredReminders() {
+→ 111   return await this.prisma.reminder.findMany(
+The table `main.reminders` does not exist in the current database. {
+  "code": "P2021",
+  "meta": {
+    "modelName": "Reminder",
+    "table": "main.reminders"
+  },
+  "clientVersion": "6.14.0",
+  "name": "PrismaClientKnownRequestError",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prisma.reminder.findMany()` invocation in\n/home/runner/workspace/src/utils/database.ts:111:39\n\n  108 }\n  109 \n  110 public async getExpiredReminders() {\n→ 111   return await this.prisma.reminder.findMany(\nThe table `main.reminders` does not exist in the current database.\n    at ei.handleRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ei.handleAndLogRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ei.request (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async a (/home/runner/workspace/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)\n    at async DatabaseManager.getExpiredReminders (/home/runner/workspace/src/utils/database.ts:111:12)\n    at async checkReminders (/home/runner/workspace/src/services/reminderService.ts:8:30)\n    at async Timeout._onTimeout (/home/runner/workspace/src/events/ready.ts:16:9)"
+}
+2025-08-20 18:37:25 [ERROR]: Error checking reminders: 
+Invalid `this.prisma.reminder.findMany()` invocation in
+/home/runner/workspace/src/utils/database.ts:111:39
+
+  108 }
+  109 
+  110 public async getExpiredReminders() {
+→ 111   return await this.prisma.reminder.findMany(
+The table `main.reminders` does not exist in the current database. {
+  "code": "P2021",
+  "meta": {
+    "modelName": "Reminder",
+    "table": "main.reminders"
+  },
+  "clientVersion": "6.14.0",
+  "name": "PrismaClientKnownRequestError",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prisma.reminder.findMany()` invocation in\n/home/runner/workspace/src/utils/database.ts:111:39\n\n  108 }\n  109 \n  110 public async getExpiredReminders() {\n→ 111   return await this.prisma.reminder.findMany(\nThe table `main.reminders` does not exist in the current database.\n    at ei.handleRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ei.handleAndLogRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ei.request (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async a (/home/runner/workspace/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)\n    at async DatabaseManager.getExpiredReminders (/home/runner/workspace/src/utils/database.ts:111:12)\n    at async checkReminders (/home/runner/workspace/src/services/reminderService.ts:8:30)\n    at async Timeout._onTimeout (/home/runner/workspace/src/events/ready.ts:16:9)"
+}
+2025-08-20 18:38:25 [ERROR]: Error checking reminders: 
+Invalid `this.prisma.reminder.findMany()` invocation in
+/home/runner/workspace/src/utils/database.ts:111:39
+
+  108 }
+  109 
+  110 public async getExpiredReminders() {
+→ 111   return await this.prisma.reminder.findMany(
+The table `main.reminders` does not exist in the current database. {
+  "code": "P2021",
+  "meta": {
+    "modelName": "Reminder",
+    "table": "main.reminders"
+  },
+  "clientVersion": "6.14.0",
+  "name": "PrismaClientKnownRequestError",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prisma.reminder.findMany()` invocation in\n/home/runner/workspace/src/utils/database.ts:111:39\n\n  108 }\n  109 \n  110 public async getExpiredReminders() {\n→ 111   return await this.prisma.reminder.findMany(\nThe table `main.reminders` does not exist in the current database.\n    at ei.handleRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ei.handleAndLogRequestError (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ei.request (/home/runner/workspace/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async a (/home/runner/workspace/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)\n    at async DatabaseManager.getExpiredReminders (/home/runner/workspace/src/utils/database.ts:111:12)\n    at async checkReminders (/home/runner/workspace/src/services/reminderService.ts:8:30)\n    at async Timeout._onTimeout (/home/runner/workspace/src/events/ready.ts:16:9)"
+}
+2025-08-20 18:39:58 [INFO]: Successfully connected to database 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: eval 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: reload 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: status 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: appstore 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: google 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: urban 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: firstmessage 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: guildbanner 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: guildicon 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: createembed 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: emojiadd 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: setbanner 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: seticon 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: setsplash 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: afk 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: avatar 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: jumbo 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: pin 
+2025-08-20 18:39:58 [DEBUG]: Loaded command: poll 
+2025-08-20 18:39:59 [DEBUG]: Loaded command: remind 
+2025-08-20 18:39:59 [DEBUG]: Loaded command: spotify 
+2025-08-20 18:39:59 [DEBUG]: Loaded command: twitter 
+2025-08-20 18:39:59 [DEBUG]: Loaded command: unpin 
+2025-08-20 18:39:59 [DEBUG]: Loaded command: userbanner 
+2025-08-20 18:39:59 [INFO]: Loaded 24 commands 
+2025-08-20 18:39:59 [DEBUG]: Loaded event: interactionCreate 
+2025-08-20 18:39:59 [DEBUG]: Loaded event: ready 
+2025-08-20 18:39:59 [DEBUG]: Loaded event: voiceStateUpdate 
+2025-08-20 18:39:59 [INFO]: Loaded 3 events 
+2025-08-20 18:40:00 [INFO]: Bot successfully started! 
+2025-08-20 18:40:00 [INFO]: Logged in as veemon#4083 
+2025-08-20 18:40:00 [INFO]: Ready to serve 4 guilds 
+2025-08-20 18:40:39 [INFO]: Successfully connected to database 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: eval 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: reload 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: status 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: appstore 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: google 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: urban 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: firstmessage 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: guildbanner 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: guildicon 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: createembed 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: emojiadd 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: setbanner 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: seticon 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: setsplash 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: afk 
+2025-08-20 18:40:39 [DEBUG]: Loaded command: avatar 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: jumbo 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: pin 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: poll 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: remind 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: spotify 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: twitter 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: unpin 
+2025-08-20 18:40:40 [DEBUG]: Loaded command: userbanner 
+2025-08-20 18:40:40 [INFO]: Loaded 24 commands 
+2025-08-20 18:40:40 [DEBUG]: Loaded event: interactionCreate 
+2025-08-20 18:40:40 [DEBUG]: Loaded event: ready 
+2025-08-20 18:40:40 [DEBUG]: Loaded event: voiceStateUpdate 
+2025-08-20 18:40:40 [INFO]: Loaded 3 events 
+2025-08-20 18:40:40 [INFO]: Bot successfully started! 
+2025-08-20 18:40:40 [INFO]: Logged in as veemon#4083 
+2025-08-20 18:40:40 [INFO]: Ready to serve 4 guilds 

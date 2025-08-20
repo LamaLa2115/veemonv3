@@ -24,7 +24,7 @@ export async function loadCommands(client: BleedClient): Promise<void> {
           const commandModule = await import(fileUrl);
           const command: Command = commandModule.default || commandModule.command;
           
-          if (command && command.data && command.execute) {
+          if (command && command.data && typeof command.execute === 'function') {
             client.commands.set(command.data.name, command);
             logger.debug(`Loaded command: ${command.data.name}`);
           } else {

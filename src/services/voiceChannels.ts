@@ -40,7 +40,7 @@ export class VoiceChannelManager {
     const dbChannel = await db.getVoiceChannel(state.channelId);
     if (dbChannel) {
       const channel = state.guild?.channels.cache.get(state.channelId);
-      if (channel && 'members' in channel && channel.members.size === 0) {
+      if (channel && channel.type === ChannelType.GuildVoice && channel.members.size === 0) {
         await this.deleteTempChannel(state.channelId);
       }
     }
@@ -53,15 +53,15 @@ export class VoiceChannelManager {
       const channel = await state.guild.channels.create({
         name: `${state.member.user.username}'s room`,
         type: ChannelType.GuildVoice,
-        parent: state.channel?.parent,
+        parent: state.channel?.parent || null,
         permissionOverwrites: [
           {
             id: state.member.id,
-            allow: [PermissionFlagsBits.ManageChannels, PermissionFlagsBits.MoveMembers],
+            allow: [PermissionFlagsBits.ManageChannels, PermissionFlagsBits.MoveMembers] as any[],
           },
           {
             id: state.guild.id,
-            allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.Connect],
+            allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.Connect] as any[],
           },
         ],
       });
