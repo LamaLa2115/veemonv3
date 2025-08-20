@@ -28,19 +28,17 @@ export class VoicemasterService {
     if (!newState.channel || !newState.guild) return;
 
     try {
-      // Get voicemaster configuration
-      const vmConfig = await db.prisma.voicemasterConfig.findUnique({
-        where: { 
-          guildId: newState.guild.id,
-        },
-      });
+      // For testing, let's use a hardcoded channel ID or name pattern
+      // You can replace this with your actual join-to-create channel ID
+      const JOIN_TO_CREATE_NAMES = ['Join to Create', 'Create Channel', '➕ Join to Create'];
+      const isJoinToCreateChannel = JOIN_TO_CREATE_NAMES.some(name => 
+        newState.channel?.name.toLowerCase().includes(name.toLowerCase())
+      );
 
-      if (!vmConfig || !vmConfig.isEnabled || newState.channelId !== vmConfig.joinChannelId) {
-        return;
-      }
+      if (!isJoinToCreateChannel) return;
 
       // Create temporary voice channel
-      await this.createTempChannel(newState.member!, vmConfig);
+      await this.createTempChannel(newState.member!);
 
     } catch (error) {
       logger.error('Error handling join-to-create:', error);
@@ -51,21 +49,24 @@ export class VoicemasterService {
     if (!oldState.channel || !oldState.guild) return;
 
     try {
-      // Check if this is a temporary voice channel
-      const tempChannel = await db.prisma.voiceChannel.findUnique({
-        where: { id: oldState.channelId! },
-      });
+      // Check if this is a temporary voice channel by name pattern
+      const isTempChannel = oldState.channel.name.includes("'s Channel") || 
+                           oldState.channel.name.includes('Temp');
 
-      if (!tempChannel) return;
+      if (!isTempChannel) return;
 
+      // Check if this channel exists in our database
+      const tempChannel = await db.getVoiceChannel(oldState.channelId!);
+      
       const channel = oldState.channel as VoiceChannel;
       
       // If channel is now empty, delete it
       if (channel.members.size === 0) {
         await channel.delete('Empty voicemaster channel cleanup');
-        await db.prisma.voiceChannel.delete({
-          where: { id: oldState.channelId! },
-        });
+        
+        if (tempChannel) {
+          await db.deleteVoiceChannel(oldState.channelId!);
+        }
         
         logger.debug(`Cleaned up empty voicemaster channel: ${channel.name}`);
       }
@@ -75,21 +76,23 @@ export class VoicemasterService {
     }
   }
 
-  private static async createTempChannel(member: GuildMember, vmConfig: any) {
+  private static async createTempChannel(member: GuildMember) {
     try {
       const guild = member.guild;
-      const category = vmConfig.categoryId ? 
-        guild.channels.cache.get(vmConfig.categoryId) as CategoryChannel : 
-        null;
 
       // Generate channel name
       const channelName = `${member.displayName}'s Channel`;
+
+      // Try to find a suitable category
+      const category = guild.channels.cache
+        .filter(ch => ch.type === ChannelType.GuildCategory)
+        .find(ch => ch.name.toLowerCase().includes('voice') || ch.name.toLowerCase().includes('temp')) as CategoryChannel;
 
       // Create the voice channel
       const tempChannel = await guild.channels.create({
         name: channelName,
         type: ChannelType.GuildVoice,
-        parent: category,
+        parent: category || null,
         userLimit: 0,
         permissionOverwrites: [
           {

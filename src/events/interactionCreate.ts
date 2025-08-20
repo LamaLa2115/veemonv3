@@ -90,7 +90,7 @@ export default {
         
         const errorMessage = {
           content: `${config.emojis.deny} An error occurred while executing this command.`,
-          ephemeral: true,
+          flags: 64, // Use flags instead of ephemeral
         };
 
         if (interaction.replied || interaction.deferred) {
@@ -188,9 +188,48 @@ async function handlePortalServerSelect(interaction: StringSelectMenuInteraction
 }
 
 async function handleVoicemasterButton(interaction: ButtonInteraction) {
-  // Voicemaster button handling will be implemented when the voicemaster service is ready
-  await interaction.reply({
-    content: `${config.emojis.warn} Voicemaster controls are being set up. Please try again later.`,
-    ephemeral: true,
-  });
+  const customId = interaction.customId;
+  const [action, , channelId] = customId.split('_');
+  
+  // Get channel data from database
+  try {
+    const tempChannel = await db.getVoiceChannel(channelId);
+    if (!tempChannel) {
+      await interaction.reply({
+        content: '❌ This voicemaster channel no longer exists.',
+        flags: 64
+      });
+      return;
+    }
+
+    // Check if user is the owner
+    if (interaction.user.id !== tempChannel.ownerId) {
+      await interaction.reply({
+        content: '❌ Only the channel owner can use these controls.',
+        flags: 64
+      });
+      return;
+    }
+
+    const channel = interaction.guild?.channels.cache.get(channelId);
+    if (!channel || channel.type !== 2) { // 2 = GuildVoice
+      await interaction.reply({
+        content: '❌ Voice channel not found.',
+        flags: 64
+      });
+      return;
+    }
+
+    await interaction.reply({
+      content: `🔧 Voicemaster control "${action}" will be implemented soon.`,
+      flags: 64
+    });
+
+  } catch (error) {
+    logger.error('Voicemaster button error:', error);
+    await interaction.reply({
+      content: '❌ An error occurred while processing your request.',
+      flags: 64
+    });
+  }
 }

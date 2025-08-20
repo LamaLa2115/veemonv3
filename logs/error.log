@@ -430,3 +430,50 @@ The table `main.reminders` does not exist in the current database. {
   "url": "https://discord.com/api/v10/channels/1407301207457923085/messages/1407802901899903098",
   "stack": "DiscordAPIError[50005]: Cannot edit a message authored by another user\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async GuildMessageManager.edit (/home/runner/workspace/node_modules/discord.js/src/managers/MessageManager.js:188:15)\n    at async Object.execute (/home/runner/workspace/src/commands/admin/deploy.ts:100:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
 }
+2025-08-20 19:11:41 [ERROR]: Error executing prefix command deploy: Cannot edit a message authored by another user {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to deploy commands. Check console for details.",
+      "tts": false,
+      "enforce_nonce": false
+    }
+  },
+  "rawError": {
+    "message": "Cannot edit a message authored by another user",
+    "code": 50005
+  },
+  "code": 50005,
+  "status": 403,
+  "method": "PATCH",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages/1407804298644951071",
+  "stack": "DiscordAPIError[50005]: Cannot edit a message authored by another user\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async GuildMessageManager.edit (/home/runner/workspace/node_modules/discord.js/src/managers/MessageManager.js:188:15)\n    at async Object.execute (/home/runner/workspace/src/commands/admin/deploy.ts:100:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 19:11:46 [ERROR]: Error executing prefix command deploy: Cannot edit a message authored by another user {
+  "requestBody": {
+    "files": [],
+    "json": {
+      "content": "<:deny:868562165093777468> Failed to deploy commands. Check console for details.",
+      "tts": false,
+      "enforce_nonce": false
+    }
+  },
+  "rawError": {
+    "message": "Cannot edit a message authored by another user",
+    "code": 50005
+  },
+  "code": 50005,
+  "status": 403,
+  "method": "PATCH",
+  "url": "https://discord.com/api/v10/channels/1407113687633756304/messages/1407804318609969307",
+  "stack": "DiscordAPIError[50005]: Cannot edit a message authored by another user\n    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n    at async GuildMessageManager.edit (/home/runner/workspace/node_modules/discord.js/src/managers/MessageManager.js:188:15)\n    at async Object.execute (/home/runner/workspace/src/commands/admin/deploy.ts:100:7)\n    at async BleedClient.execute (/home/runner/workspace/src/events/messageCreate.ts:118:7)"
+}
+2025-08-20 19:11:53 [ERROR]: Error executing command voicemaster: No subcommand specified for interaction. {
+  "code": "CommandInteractionOptionNoSubcommand",
+  "stack": "TypeError [CommandInteractionOptionNoSubcommand]: No subcommand specified for interaction.\n    at CommandInteractionOptionResolver.getSubcommand (/home/runner/workspace/node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js:113:13)\n    at Object.execute (/home/runner/workspace/src/commands/server/voicemaster.ts:44:44)\n    at BleedClient.execute (/home/runner/workspace/src/events/interactionCreate.ts:86:23)\n    at BleedClient.emit (node:events:524:28)\n    at InteractionCreateAction.handle (/home/runner/workspace/node_modules/discord.js/src/client/actions/InteractionCreate.js:101:12)\n    at module.exports [as INTERACTION_CREATE] (/home/runner/workspace/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)\n    at WebSocketManager.handlePacket (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:351:31)\n    at WebSocketManager.<anonymous> (/home/runner/workspace/node_modules/discord.js/src/client/websocket/WebSocketManager.js:235:12)\n    at WebSocketManager.emit (/home/runner/workspace/node_modules/@vladfrangu/async_event_emitter/src/index.ts:513:28)\n    at WebSocketShard.<anonymous> (/home/runner/workspace/node_modules/@discordjs/ws/src/strategies/sharding/SimpleShardingStrategy.ts:32:47)"
+}
+2025-08-20 19:14:13 [ERROR]: Error loading command voicemaster.ts: Transform failed with 1 error:
+/home/runner/workspace/src/commands/server/voicemaster.ts:210:3: ERROR: Unexpected "," {
+  "name": "TransformError",
+  "stack": "Error: Transform failed with 1 error:\n/home/runner/workspace/src/commands/server/voicemaster.ts:210:3: ERROR: Unexpected \",\"\n    at failureErrorWithLog (/home/runner/workspace/node_modules/esbuild/lib/main.js:1467:15)\n    at /home/runner/workspace/node_modules/esbuild/lib/main.js:736:50\n    at responseCallbacks.<computed> (/home/runner/workspace/node_modules/esbuild/lib/main.js:603:9)\n    at handleIncomingPacket (/home/runner/workspace/node_modules/esbuild/lib/main.js:658:12)\n    at Socket.readFromStdout (/home/runner/workspace/node_modules/esbuild/lib/main.js:581:7)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)\n    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)"
+}
